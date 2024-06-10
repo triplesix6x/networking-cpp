@@ -1,7 +1,3 @@
-#include "asio/error_code.hpp"
-#include "asio/io_context.hpp"
-#include "asio/ip/address.hpp"
-#include "asio/ip/tcp.hpp"
 #include <iostream>
 
 #include <asio.hpp>
@@ -21,11 +17,11 @@ int main()
 	
 	if (!ec)
 	{
-		std::cout << "Connected" << std::endl;
+		std::cout << "Connected!\n";
 	}
 	else
 	{
-		std::cout << "Failed to connect" << ec.message() << std::endl;
+		std::cout << "Failed to connect:\n" << ec.message() << "\n";
 	}
 	//TODO: everything xD
     return 0;
